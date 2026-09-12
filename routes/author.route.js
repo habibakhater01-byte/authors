@@ -6,13 +6,25 @@ import {
   updateAuthor,
   deleteAuthor,
 } from "../controllers/author.controller.js";
+import { validate } from "../middlewares/validate.middleware.js";
+import {
+  createAuthorSchema,
+  updateAuthorSchema,
+  searchQuerySchema,
+  idParamSchema,
+} from "../schemas/author.schema.js";
 
 const router = express.Router();
 
-router.get("/", getAllAuthors);
-router.get("/:id", getAuthorById);
-router.post("/", createAuthor);
-router.patch("/:id", updateAuthor);
-router.delete("/:id", deleteAuthor);
+router.get("/", validate(searchQuerySchema, "query"), getAllAuthors);
+router.get("/:id", validate(idParamSchema, "params"), getAuthorById);
+router.post("/", validate(createAuthorSchema, "body"), createAuthor);
+router.patch(
+  "/:id",
+  validate(idParamSchema, "params"),
+  validate(updateAuthorSchema, "body"),
+  updateAuthor
+);
+router.delete("/:id", validate(idParamSchema, "params"), deleteAuthor);
 
 export default router;

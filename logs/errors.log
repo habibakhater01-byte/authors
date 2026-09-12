@@ -1,0 +1,70 @@
+[2026-09-12T00:07:11.789Z] POST /authors - [
+  {
+    "origin": "string",
+    "code": "too_small",
+    "minimum": 1,
+    "inclusive": true,
+    "path": [
+      "name"
+    ],
+    "message": "Name is required"
+  }
+]
+ZodError: [
+  {
+    "origin": "string",
+    "code": "too_small",
+    "minimum": 1,
+    "inclusive": true,
+    "path": [
+      "name"
+    ],
+    "message": "Name is required"
+  }
+]
+    at file:///D:/new%20project%202/middlewares/validate.middleware.js:4:29
+    at Layer.handleRequest (D:\new project 2\node_modules\router\lib\layer.js:152:17)
+    at next (D:\new project 2\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\new project 2\node_modules\router\lib\route.js:117:3)
+    at handle (D:\new project 2\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\new project 2\node_modules\router\lib\layer.js:152:17)
+    at D:\new project 2\node_modules\router\index.js:295:15
+    at processParams (D:\new project 2\node_modules\router\index.js:582:12)
+    at next (D:\new project 2\node_modules\router\index.js:291:5)
+    at router.handle (D:\new project 2\node_modules\router\index.js:186:3)
+
+[2026-09-12T00:10:29.523Z] POST /authors - [
+  {
+    "origin": "string",
+    "code": "too_small",
+    "minimum": 1,
+    "inclusive": true,
+    "path": [
+      "name"
+    ],
+    "message": "Name is required"
+  }
+]
+ZodError: [
+  {
+    "origin": "string",
+    "code": "too_small",
+    "minimum": 1,
+    "inclusive": true,
+    "path": [
+      "name"
+    ],
+    "message": "Name is required"
+  }
+]
+    at file:///D:/new%20project%202/middlewares/validate.middleware.js:4:29
+    at Layer.handleRequest (D:\new project 2\node_modules\router\lib\layer.js:152:17)
+    at next (D:\new project 2\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (D:\new project 2\node_modules\router\lib\route.js:117:3)
+    at handle (D:\new project 2\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (D:\new project 2\node_modules\router\lib\layer.js:152:17)
+    at D:\new project 2\node_modules\router\index.js:295:15
+    at processParams (D:\new project 2\node_modules\router\index.js:582:12)
+    at next (D:\new project 2\node_modules\router\index.js:291:5)
+    at router.handle (D:\new project 2\node_modules\router\index.js:186:3)
+
